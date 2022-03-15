@@ -1,19 +1,287 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<html lang="en">
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets\img\ressources_logos\scrool.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets\css\default.css">
+    <link rel="stylesheet" href="assets\css\normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <script src="assets\js\jquery-3.6.0.min.js.js"></script>
+    <title></title><title>{% block title %}Accueil Human E-Terre | HET{% endblock %}</title>
+    
+    {% block stylesheets %}
+    {% endblock %} 
+    
+    {% block javascripts %}
+    {% endblock %}
+</head>
+
+<body>
+{% block body %}
+    <!-- la video en background -->
+    <video muted autoplay loop src="assets\video\VBGv2.mp4" id="bgvid"></video>
+    <!-- le menu -->
+    <div class="bd_noire">
+        <div class="btn_menu">
+            <img id="btn_mn" src="./assets/img/ressources_logos/btn_mn.png" alt="access button menu">
+        </div>
+        <img id="logo_menu" src="assets\img\ressources_logos\logo.png" alt="logo">
+        <!--Block du menu-->
+        <ul id="menu">
+            <li class="menu_position"><a href="#contenu_1" class="scrollto"
+                    title="aller à la section Qui Sommes-Nous?">HET</a></li>
+            <li class="menu_position"><a href="#contenu_2" class="scrollto" title="aller à la section Mission">Notre
+                    Mission</a></li>
+            <li class="menu_position"><a href="#contenu_3" class="scrollto"
+                    title="aller à la section réferences projets">Nos projets</a></li>
+            <li class="menu_position"><a href="#contenu_4" class="scrollto" title="aller à la section Contact">Contactez
+                    Nous</a></li>
+            <li class="menu_position"><a href="/boutique.php"
+                    title="aller à la page liste des projet en cours">Boutique</a></li>
+            <li class="menu_position"><a href="/iscription.php" title="aller à la page inscription">Inscription</a></li>
+            <li class="menu_position"><a href="/connexion.php" title="aller à la page Contact">Connnexion</a></li>
+        </ul>
+    </div>
+    <!-- L'entete -->
+    <header>
+        <div class="container_header">
+            <div class="titre">
+                <h1>
+                    HUMAN <img id="test_titre" src="assets\img\ressources_logos\scrool.svg" alt="logo cigle"> TERRE
+                </h1>
+            </div>
+            <div class="message">
+                <h2 id="message">
+                    "Au Coeur De L'Homme"
+                </h2>
+            </div>
+            <div class="scroll">
+                <img class="jello-horizontal" src="assets\img\ressources_logos\scroll.png" alt="bouton scroll">
+            </div>
+        </div>
+    </header>
+
+    <!-- sections principale -->
+    <!-- section "qui sommes nous" -->
+    <span class="content_menu" id="contenu_1"></span>
+    <div class="grid ">
+        <div class="item" tabindex="1">
+            <div class="box">
+                <div class="container_content_grid">
+                    <h2>Qui sommes-Nous?</h2>
+               </div>
+            </div>
+        </div>
+        <div class="item" tabindex="2">
+            <div class="box">
+                <div class="tooltip">grid-area: big</div>
+            </div>
+        </div>
+        <div class="item" tabindex="3">
+            <div class="box">
+                <div class="tooltip">grid-area: medium</div>
+            </div>
+        </div>
+        <div class="item" tabindex="4">
+            <div class="box">
+                <div class="tooltip">grid-area: medium</div>
+            </div>
+        </div>
+    </div>
+    <!-- Barre d'accroch -->
+    <div class="cont_ac">
+        <div class="grid_accroch">
+            <div class="figure_1">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_1.png" alt="savoir et culture">
+                    <figcaption>
+                        Connaissances environnementales locales pointues
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="figure_2">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_2.png" alt="projets cibles">
+                    <figcaption>
+                        Elaboration des projets en partenariat avec les entités locales.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="figure_3">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_3.png"
+                        alt="demarche à but non lucratif">
+                    <figcaption>
+                        L'argent est un moyen, pas un but.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <!-- section "notre missions" -->
+    <span class="content_menu" id="contenu_2"></span>
+    <div class="grid ">
+        <div class="item" tabindex="1">
+
+            <div class="box">
+                <div class="tooltip">grid-area: hero</div>
+            </div>
+        </div>
+        <div class="item" tabindex="2">
+            <div class="box">
+                <div class="tooltip">grid-area: big</div>
+            </div>
+        </div>
+        <div class="item" tabindex="3">
+            <div class="box">
+                <div class="tooltip">grid-area: medium</div>
+            </div>
+        </div>
+        <div class="item" tabindex="4">
+            <div class="box">
+                <div class="tooltip">grid-area: medium</div>
+            </div>
+        </div>
+    </div>
+    <!-- Barre d'accroch -->
+    <div class="cont_ac">
+        <div class="grid_accroch">
+            <div class="figure_1">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_1.png" alt="savoir et culture">
+                    <figcaption>
+                        Connaissances environnementales locales pointues
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="figure_2">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_2.png" alt="projets cibles">
+                    <figcaption>
+                        Elaboration des projets en partenariat avec les entités locales.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="figure_3">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_3.png"
+                        alt="demarche à but non lucratif">
+                    <figcaption>
+                        L'argent est un moyen, pas un but.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <!-- section "nos projets" -->
+    <span class="content_menu" id="contenu_3"></span>
+    <div class="grid ">
+        <div class="item" tabindex="1">
+            <div class="box">
+                <div class="tooltip">grid-area: hero</div>
+            </div>
+        </div>
+        <div class="item" tabindex="2">
+            <div class="box">
+                <div class="tooltip">grid-area: big</div>
+            </div>
+        </div>
+        <div class="item" tabindex="3">
+            <div class="box">
+                <div class="tooltip">grid-area: medium</div>
+            </div>
+        </div>
+        <div class="item" tabindex="4">
+            <div class="box">
+                <div class="tooltip">grid-area: medium</div>
+            </div>
+        </div>
+    </div>
+    <!-- Barre d'accroch -->
+    <div class="cont_ac">
+        <div class="grid_accroch">
+            <div class="figure_1">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_4.png" alt="savoir et culture">
+                    <figcaption>
+                        Gestion des ressources aquifères
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="figure_2">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_5.png" alt="projets cibles">
+                    <figcaption>
+                        Construction de centres educatifs pour l'alphabetisation de la population 
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="figure_3">
+                <figure>
+                    <img class="jello-horizontal" src="assets\img\ressources_logos\fig_6.png"
+                        alt="demarche à but non lucratif">
+                    <figcaption>
+                        Construction de dispensaires pour les besoins immediats d'assistance sanitaire
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- section contact -->
+    <section class="contact">
+        <div class="content_menu" id="contenu_4"></div>
+        <div class="container_form">
+            <h2 class="titre_form">Contactez Nous!</h2>
+            <form action="http://127.0.0.1:5000/form-send?to=" method="post">
+                <div class="contact_form">
+                    <input required placeholder="Name" class="name inp" type="name" name="name">
+                    <input required placeholder="Email" class="email inp" type="email" name="email">
+                    <input required placeholder="Phone Number" class="p_number inp" type="phone" name="phone">
+                    <input required placeholder="Subject" class="subj_ect inp" name="subject" type="text" />
+                    <textarea required name="message" placeholder="Message .." rows="14" class="text_area"></textarea>
+                    <button class="submit_btn">Send</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $('.btn_menu').click(function () {
+                $('.bd_noire').toggleClass('bd_noire2');
+            });
+            $("#message").animate({
+                'opacity': 0
+            }, 10000,
+                function () {
+                    $("#titre_content1").animate({
+                        'opacity': 10000
+                    }, 1000);
+                }
+            );
+            /*<!--je declare une variable-->*/
+            var scrolling = $('.scrollto');
+
+            /*<!--j'ecoute le click sur mon menu->*/
+            $(scrolling).click(function () {
+                /*<!--je recupere l'Href deu scrolling-->*/
+                var href = $(this).attr("href");
+                /*<!--j'execute l'animation-->*/
+                $('html, body').animate({
+                    scrollTop: $(href).offset().top
+                }, 2000);
+                return false;
+
+            });
+        });
+    </script>
+{% endblock %}
+</body>
+
 </html>
